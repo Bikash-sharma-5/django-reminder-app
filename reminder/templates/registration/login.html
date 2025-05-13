@@ -1,0 +1,74 @@
+<div class="login-wrapper">
+    <form method="POST" class="login-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="login-button">Login</button>
+        <p class="register-link">Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+    </form>
+</div>
+
+<style>
+/* Centering Wrapper */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #e8f0fe;
+}
+
+/* Form Styling */
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Form fields */
+.login-form p {
+    margin-bottom: 15px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Submit Button */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background: #45a049;
+}
+
+/* Register link */
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
+
+.register-link a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+</style>

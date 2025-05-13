@@ -1,0 +1,134 @@
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-logo">ReminderApp</div>
+        <div class="navbar-links">
+            <a href="{% url 'create_reminder' %}">Create Reminder</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+    </div>
+</nav>
+
+
+<h1 class="heading">Your Reminders</h1>
+
+<div class="reminder-container">
+    {% for reminder in reminders %}
+        <div class="reminder-box">
+            <div class="reminder-message">
+                <strong>Message:</strong> {{ reminder.message }}
+            </div>
+            <div class="reminder-time">
+                <strong>Time:</strong> {{ reminder.remind_at }}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<a href="{% url 'create_reminder' %}" class="create-reminder-link">+ Create a new reminder</a>
+
+<style>
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading styling */
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Container for reminders */
+.reminder-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Each box style */
+.reminder-box {
+    width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #d1eaff, #ffffff);
+    border-left: 5px solid #007BFF;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reminder-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Text styles inside box */
+.reminder-message {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.reminder-time {
+    font-size: 0.95rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* Link styling */
+.create-reminder-link {
+    display: block;
+    text-align: center;
+    margin: 30px auto;
+    font-size: 1.2rem;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.create-reminder-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+/* Navbar Styling */
+.navbar {
+    background-color: #007BFF;
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: #d4e9ff;
+}
+
+</style>

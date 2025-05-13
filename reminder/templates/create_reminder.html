@@ -1,0 +1,93 @@
+<h1 class="page-heading">Create a New Reminder</h1>
+
+<div class="form-container">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="submit-button">Create Reminder</button>
+    </form>
+</div>
+
+<style>
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Heading */
+.page-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 40px;
+    color: #333;
+}
+
+/* Form Container Styling */
+.form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Form Input and Label Styling */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Submit Button Styling */
+.submit-button {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Additional styling for form input elements */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input[type="datetime-local"] {
+    padding: 10px;
+}
+
+</style>

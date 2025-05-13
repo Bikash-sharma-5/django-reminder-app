@@ -1,0 +1,77 @@
+<div class="register-wrapper">
+    <form method="POST" class="register-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="register-button">Register</button>
+        <p class="login-redirect">Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    </form>
+</div>
+
+<style>
+/* Full page centering */
+.register-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e3f2fd;
+}
+
+/* Form container */
+.register-form {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph spacing */
+.register-form p {
+    margin-bottom: 18px;
+}
+
+/* Inputs styling */
+.register-form input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button styling */
+.register-button {
+    width: 100%;
+    padding: 12px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.register-button:hover {
+    background: #0056b3;
+}
+
+/* Redirect to login */
+.login-redirect {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.login-redirect a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login-redirect a:hover {
+    text-decoration: underline;
+}
+</style>
