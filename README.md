@@ -5,7 +5,7 @@ A Django application to schedule and send **reminders** via **email** and **SMS*
 ---
 ![Screenshot 2025-05-13 201559](https://github.com/user-attachments/assets/83e6a445-4836-4d98-a27e-9bc66f91f2a0)
 ![Screenshot 2025-05-13 201611](https://github.com/user-attachments/assets/be203253-8914-4f2d-9e5c-dd1e3fc47af2)
-![Screenshot 2025-05-13 201637](https://github.com/user-attachments/assets/5e50ba2e-b42c-43cb-9c36-912552bef22b)
+
 
 
 ## 📌 Table of Contents
