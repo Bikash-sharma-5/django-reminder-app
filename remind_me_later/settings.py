@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-eotgowt24-6)g5)xbk84rd3=y=f6kjasogpu7@89h-niovy(gz'
+SECRET_KEY = 'd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,8 +31,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'bikashsharma5151@gmail.com'
-EMAIL_HOST_PASSWORD = "mrbb xobt ayhc hecc"
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = "c"
 # Application definition
 
 INSTALLED_APPS = [
@@ -45,12 +45,12 @@ INSTALLED_APPS = [
     'rest_framework',
     'reminder',
 ]
-TWILIO_ACCOUNT_SID = 'ACe165419dbcedeb466d6953af14786d45'
-TWILIO_AUTH_TOKEN = '0a75a7663f91439088c2c492e7458095'
-TWILIO_PHONE_NUMBER = '+19783572190'
+TWILIO_ACCOUNT_SID = ''
+TWILIO_AUTH_TOKEN = ''
+TWILIO_PHONE_NUMBER = ''
 
 # Email settings (Django’s default email settings should work)
-DEFAULT_FROM_EMAIL = 'bikashsharma5151@gmail.com'
+DEFAULT_FROM_EMAIL = ''
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
